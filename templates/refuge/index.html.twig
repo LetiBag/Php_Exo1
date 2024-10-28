@@ -1,0 +1,13 @@
+{% extends 'refuge/base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des Animaux du Refuge</h1>
+    <ul>
+        {% for animal in animaux %}
+            <li>{{ animal.nom }} - {{ animal.type }} - Âge : {{ animal.age }} - Sexe : {{ animal.sexe }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ path('refuge_ajouter') }}">Ajouter un Animal</a>
+    <a href="{{ path('refuge_sons') }}">Faire Émettre des Sons</a>
+    <a href="{{ path('refuge_deplacements') }}">Faire Déplacer les Animaux</a>
+{% endblock %}

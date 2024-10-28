@@ -1,0 +1,11 @@
+{% extends '../base.html.twig' %}
+
+{% block body %}
+    <h1>Sons des Animaux</h1>
+    <ul>
+        {% for son in sons %}
+            <li>{{ son }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ path('refuge_home') }}">Retour à la liste des animaux</a>
+{% endblock %}

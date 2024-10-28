@@ -1,0 +1,11 @@
+{% extends '../base.html.twig' %}
+
+{% block body %}
+    <h1>Déplacements des Animaux</h1>
+    <ul>
+        {% for deplacement in deplacements %}
+            <li>{{ deplacement }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ path('refuge_home') }}">Retour à la liste des animaux</a>
+{% endblock %}
